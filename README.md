@@ -31,6 +31,7 @@ Install ROS2:
   - `sudo apt install ros-foxy-desktop`
   - `sudo apt install python3-colcon-common-extensions`
   - `sudo apt-get install ros-foxy-cv-bridge`
+  - `sudo apt install libpcl-dev`
   - ```sh
     cd ~
     mkdir -p ~/ros2_ws/src
