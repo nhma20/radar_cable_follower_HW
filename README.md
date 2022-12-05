@@ -20,6 +20,7 @@ See `/CAD/` directory for files.
   - `mkswap <path_to_swapfile.img>`
   - Add to `/etc/fstab`: `<path_to_swapfile.img> swap swap sw 0 0`
   - `swapon <path_to_swapfile.img>`
+
 Install ROS2:
   - `sudo apt update`
   - `sudo apt upgrade`
@@ -36,6 +37,7 @@ Install ROS2:
     cd ~
     mkdir -p ~/ros2_ws/src
     ```
+
 Install PX4:
   - Foonathan memory:
     - `cd ~`
@@ -44,6 +46,7 @@ Install PX4:
     - `mkdir build && cd build`
     - `cmake ..`
     - `sudo cmake --build . --target install`
+   
   - Fast-RTPS-Gen
     - `sudo apt-get install openjdk-8-jre`
     - `export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64`
@@ -52,6 +55,7 @@ Install PX4:
       && cd ~/Fast-RTPS-Gen \
       && ./gradlew assemble \
       && sudo ./gradlew install`
+  
   - PX4:
     - ```sh
       cd ~
@@ -79,7 +83,8 @@ Install PX4:
       ```sh
       cd ~/ros2_ws/src/px4_ros_com/scripts/
       ./build_ros2_workspace.bash --verbose
-      ```      
+      ```   
+      
 Radar Cable Follower and IWR6843ISK ROS2 packages installation:
   - `cd ~/ros2_ws/src/`
   - `git clone https://github.com/nhma20/radar_cable_follower.git`
