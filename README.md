@@ -40,7 +40,7 @@ Install PX4:
     - `cd ~`
     - `git clone https://github.com/eProsima/foonathan_memory_vendor.git`
     - `cd foonathan_memory_vendor`
-    - `mkdir build && cd build
+    - `mkdir build && cd build`
     - `cmake ..`
     - `sudo cmake --build . --target install`
   - Fast-RTPS-Gen
@@ -86,11 +86,13 @@ Radar Cable Follower and IWR6843ISK ROS2 packages installation:
   - `git clone https://github.com/nhma20/iwr6843isk_ros2.git`
   - `cd ~/ros2_ws/`
   - `colcon build`
+
 Set up SSH:
   - `sudo apt update`
   - `sudo apt install openssh-server`
   - `sudo systemctl status ssh` (check if running)
   - `sudo ufw allow ssh`
+
 Connect to network:
   - `nmcli radio wifi` (check if wifi on)
   - `nmcli dev wifi list` (list available networks)
