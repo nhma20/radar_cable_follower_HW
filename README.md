@@ -123,6 +123,17 @@ Connect to network:
     Optional speed parameters:
     - `MPC_Z_VEL_ALL 3`
     - `MPC_XY_VEL_ALL 5`
+- Validate connection between Raspberry Pi and Pixhawk:
+  - Connect FTDI-USB-to-Serial between Raspberry Pi USB port and Pixhawk TELEM1 port.
+  - Power on Pixhawk (battery or debug micro-USB port).
+  - On Raspberry Pi:
+    - `source ~/ros2_ws/install/setup.sh`
+    - `micrortps_agent -d /dev/ttyUSB0` (find correct port first)
+    - `ros2 topic echo /fmu/vehicle_odometry/out` (should print the odometry messages from the Pixhawk)
+    - If there is no connection, check that the micrortps_client is running on the Pixhawk with the MAVLink Console:
+      - `micrortps_client status`
+      - debug from there
+  
   
 
 
