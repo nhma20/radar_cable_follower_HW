@@ -105,7 +105,7 @@ Connect to network:
   - `sudo nmcli dev wifi connect <wifi_ssid> password "<password>"`
   - Get host ip:
     - `ifconfig` (look for wlan* or eth or enp or similar)
-  - `sudo nmap -sP <host_ip_with_0_as_last>/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'` (for Raspberry Pi 3)
+  - `sudo nmap -sP <host_ip>/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'` (for Raspberry Pi 3)
   - `e.g.: sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'`
   - Try logging in on each output IP addres:
     - `ssh ubuntu@<ip_from_above>`
