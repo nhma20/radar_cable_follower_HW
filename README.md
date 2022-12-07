@@ -107,6 +107,7 @@ Connect to network:
     - `ifconfig` (look for wlan* or eth or enp or similar)
   - `sudo nmap -sP <host_ip>/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'` (for Raspberry Pi 3)
   - `e.g.: sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'`
+  - if `dnet: Failed to open.. ` try `sudo snap connect nmap:network-control` or `nmap` with `--unprivileged` flag.
   - Try logging in on each output IP addres:
     - `ssh ubuntu@<ip_from_above>`
 
