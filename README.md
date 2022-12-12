@@ -126,11 +126,12 @@ Connect to network:
     - `cd ~/PX4-Autopilot/`
     - `make px4_fmu-v5_rtps`
   - Load Pixhawk with newly built firmware (`~/PX4-Autopilot/build/px4_fmu-v5_rtps/px4_fmu-v5_rtps.px4`) through QGroundControl
-  - Set parameters:
+  - Set parameters (file provided in `/pixhawk_parameters/` directory):
     - `RTPS_CONFIG TELEM1`
-    - `MAV_0_CONFIG Disabled`
+    - `MAV_0_CONFIG TELEM/SERIAL4`
     - `RTPS_MAV_CONFIG Disabled`
     - `SER_TEL1_BAUD 460800 8N1`
+    - `SER_TEL4_BAUD 57600 8N1`
     Optional speed parameters:
     - `MPC_Z_VEL_ALL 3`
     - `MPC_XY_VEL_ALL 5`
