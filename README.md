@@ -62,7 +62,7 @@ Install PX4:
       git clone -n https://github.com/PX4/PX4-Autopilot.git
       cd PX4-Autopilot/
       git checkout 6823cbc4140e29568f00e1211ae60e057adb1a1f
-      git submodule update --init --recursive
+      (not needed) git submodule update --init --recursive
       bash ./Tools/setup/ubuntu.sh
       ```
     - ```sh
