@@ -122,7 +122,7 @@ Connect to network:
     - `git checkout d7a962b4269d3ca3d2dcae44da7a37177af1d8cd`
     - `git submodule update --init --recursive`
     - Delete the micro_dds directory in the firmware (`PX4-Autopilot/src/modules/microdds_client/`)
-    - Go to `PX4-Autopilot/boards/px4/fmu-v5/rtps.px4board` and set CONFIG_MODULES_MICRODDS_CLIENT=n
+    - Go to `PX4-Autopilot/boards/px4/fmu-v5/rtps.px4board` (create if does not exist) and set CONFIG_MODULES_MICRODDS_CLIENT=n
     - `cd ~/PX4-Autopilot/`
     - `make px4_fmu-v5_rtps`
   - Load Pixhawk with newly built firmware (`~/PX4-Autopilot/build/px4_fmu-v5_rtps/px4_fmu-v5_rtps.px4`) through QGroundControl
