@@ -61,7 +61,7 @@ Install PX4:
       cd ~
       git clone -n https://github.com/PX4/PX4-Autopilot.git
       cd PX4-Autopilot/
-      git checkout d7a962b4269d3ca3d2dcae44da7a37177af1d8cd
+      git checkout 6823cbc4140e29568f00e1211ae60e057adb1a1f
       git submodule update --init --recursive
       bash ./Tools/setup/ubuntu.sh
       ```
@@ -69,11 +69,11 @@ Install PX4:
       cd ~/ros2_ws/src
       git clone -n https://github.com/PX4/px4_ros_com.git
       cd px4_ros_com/
-      git checkout 90538d841a383fe9631b7046096f9aa808a43121
+      git checkout 1562ff30d56b7ba26e4d2436724490f900cc2375
       cd ..
       git clone -n https://github.com/PX4/px4_msgs.git
       cd px4_msgs/
-      git checkout 7f89976091235579633935b7ccaab68b2debbe19
+      git checkout b64ef0475c1d44605688f4770899fe453d532be4
       ```
     - ```sh
       cd ~/PX4-Autopilot/msg/tools/
