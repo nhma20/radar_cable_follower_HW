@@ -62,9 +62,24 @@ Install PX4:
       git clone -n https://github.com/PX4/PX4-Autopilot.git
       cd PX4-Autopilot/
       git checkout 6823cbc4140e29568f00e1211ae60e057adb1a1f
-      (not needed) git submodule update --init --recursive
+      (not needed unless for simulation) git submodule update --init --recursive
       bash ./Tools/setup/ubuntu.sh
       ```
+      
+      To listen to radio channels, edit `~/PX4-Autopilot/msg/tools/urtps_bridge_topics.yaml` to include:
+      ```sh
+        - msg:     rc_channels
+          send:    true
+      ```
+      
+      Then run:
+      ```sh
+      cd ~/PX4-Autopilot/msg/tools/
+      python3 uorb_to_ros_urtps_topics.py -i ~/PX4-Autopilot/msg/tools/urtps_bridge_topics.yaml -o ~/ros2_ws/src/px4_ros_com/templates/urtps_bridge_topics.yaml
+
+      ```
+      
+      
     - ```sh
       cd ~/ros2_ws/src
       git clone -n https://github.com/PX4/px4_ros_com.git
