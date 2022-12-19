@@ -76,9 +76,36 @@ Install PX4:
       ```sh
       cd ~/PX4-Autopilot/msg/tools/
       python3 uorb_to_ros_urtps_topics.py -i ~/PX4-Autopilot/msg/tools/urtps_bridge_topics.yaml -o ~/ros2_ws/src/px4_ros_com/templates/urtps_bridge_topics.yaml
-
       ```
       
+      The PX4 firmware for the flight controller (.px4 file) must be built with the same topics in the above file. A known-to-work version has the following content:
+      ```sh
+      rtps:
+        - msg:     offboard_control_mode
+          receive: true
+        - msg:     telemetry_status
+          receive: true
+        - msg:     timesync
+          receive: true
+          send:    true
+        - msg:     vehicle_command
+          receive: true
+        - msg:     vehicle_control_mode
+          send:    true
+        - msg:     vehicle_local_position_setpoint
+          receive: true
+        - msg:     trajectory_setpoint # multi-topic / alias of vehicle_local_position_setpoint
+          base:    vehicle_local_position_setpoint
+          receive: true
+        - msg:     vehicle_odometry
+          send:    true
+        - msg:     vehicle_status
+          send:    true
+        - msg:     timesync_status
+          send:    true
+        - msg:     rc_channels
+          send:    true
+      ```
       
     - ```sh
       cd ~/ros2_ws/src
