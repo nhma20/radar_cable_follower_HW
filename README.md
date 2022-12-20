@@ -1,4 +1,7 @@
 # Radar Cable Follower Hardware setup
+
+<img src="https://user-images.githubusercontent.com/76950970/208680969-866df8b5-8aec-4c6a-a195-0101bb107cd2.jpg" width="750">
+
 Hardware setup for the Radar Cable Follower drone
 
 Includes the mounting mechanism, setting up the Raspberry Pi (3B+) and Pixhawk Mini (4), and validating connections. 
