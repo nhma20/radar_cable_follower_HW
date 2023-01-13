@@ -10,6 +10,8 @@ Includes the mounting mechanism, setting up the Raspberry Pi (3B+) and Pixhawk M
 
 See `/CAD/` directory for files.
 
+<img src="https://user-images.githubusercontent.com/76950970/212426757-107a93c1-cf74-460e-98ba-200d014164a9.png" width="750">
+
 <img src="https://user-images.githubusercontent.com/76950970/205514743-2433076a-09ab-4db5-b3d3-5ae6974ff65a.jpg" width="750">
 
 <img src="https://user-images.githubusercontent.com/76950970/205514749-465f3f85-07b2-422c-9d46-62dabee551ee.jpg" width="750">
