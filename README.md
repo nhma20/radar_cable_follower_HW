@@ -125,7 +125,12 @@ Install PX4:
     - ```sh
       cd ~/PX4-Autopilot/msg/tools/
       ./uorb_to_ros_msgs.py ~/PX4-Autopilot/msg/ ~/ros2_ws/src/px4_msgs/msg/
-      ```      
+      ```
+    - ```sh
+      cd ~/PX4-Autopilot/msg/tools/
+      python3 uorb_to_ros_urtps_topics.py -i urtps_bridge_topics.yaml -o ~/ros2_ws/src/px4_ros_com/templates/urtps_bridge_topics.yaml
+      ```
+      
     - This step may take more than an hour:
       ```sh
       cd ~/ros2_ws/src/px4_ros_com/scripts/
